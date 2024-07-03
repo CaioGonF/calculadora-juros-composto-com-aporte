@@ -26,6 +26,7 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 100px;
+  box-sizing: border-box;
 }
 .titulo {
   grid-column: -1/1;
@@ -113,7 +114,8 @@ input {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: auto 15px;
+    margin: auto;
+    margin-inline: 5px;
   }
   .resultado.mostrar {
     display: grid;
