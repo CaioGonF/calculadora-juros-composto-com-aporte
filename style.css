@@ -21,7 +21,7 @@ input {
 
 .container {
   background-color: antiquewhite;
-  padding: 10px 30px;
+  padding: 10px 30px 40px 30px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -100,6 +100,7 @@ input {
 
 @media (max-width: 900px) {
   body {
+    margin-top: 200px;
     font-size: 12px;
   }
   h1 {
@@ -116,6 +117,7 @@ input {
     grid-template-columns: 1fr;
     margin: auto;
     margin-inline: 5px;
+    padding-bottom: 30px;
   }
   .resultado.mostrar {
     display: grid;
