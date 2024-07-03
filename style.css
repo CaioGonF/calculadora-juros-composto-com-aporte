@@ -115,7 +115,7 @@ input {
     grid-template-columns: 1fr;
     margin: auto 15px;
   }
-  .resultado {
+  .resultado.mostrar {
     display: grid;
     grid-template-columns: 1fr;
   }
