@@ -44,10 +44,18 @@ function calcular() {
     var valorInvestido = valorInicial + valorMensal * periodo2;
     var valorJuros = valorTotal - valorInvestido;
 
-    document.getElementById("valorTotal").innerHTML = valorTotal.toFixed(2);
+    let BrReal = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+
+    document.getElementById("valorTotal").innerHTML = BrReal.format(valorTotal);
+
     document.getElementById("valorInvestido").innerHTML =
-      valorInvestido.toFixed(2);
-    document.getElementById("valorJuros").innerHTML = valorJuros.toFixed(2);
+      BrReal.format(valorInvestido);
+    document.getElementById("valorJuros").innerHTML = BrReal.format(valorJuros);
+    const resultado = document.querySelector(".resultado");
+    resultado.classList.add("mostrar");
   } else {
     alert("Preencha todos os campos com valores positivos!");
     return;
