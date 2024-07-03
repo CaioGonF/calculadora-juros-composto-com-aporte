@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juros Compostos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="titulo">
+        <h1>Simulador de Juros Compostos</h1>
+      </div>
+      <div class="opcao">
+
+        <label for="valorInicial">Valor inicial</label>
+        <div class="detalhe">R$</div>
+        <input type="number" min="0" id="valorInicial" name="valorInicial" placeholder="0.00">
+      </div>
+      <div class="opcao">
+
+        <label for="valorMensal">Valor mensal</label>
+        <div class="detalhe">R$</div>
+        <input type="number" min="0" id="valorMensal" name="valorMensal" placeholder="0.00">
+      </div>
+      <div class="opcao resposividadeOpcao">
+
+        <label for="taxaJuros">Taxa de juros</label>
+        <div class="detalhe">%</div>
+        <input type="number" min="0" id="taxaJuros" name="taxaJuros" placeholder="0.0">
+        <div><select name="periodoTaxa" id="periodoTaxa">
+            <option value="anual">Anual</option>
+            <option value="mensal">Mensal</option>
+          </select></div>
+      </div>
+      <div class="opcao">
+        <label for="periodo">Período </label>
+        <input type="number" min="0" id="periodo" name="periodo" placeholder="0">
+        <div><select name="periodoTempo" id="periodoTempo">
+            <option value="anual">ano(s)</option>
+            <option value="mensal">mes(es)</option>
+          </select></div>
+      </div>
+      <div class="menu">
+        <div class="botao"><button id="calcular" onclick="calcular()">Calcular</button></div>
+        <div class="limpar"><a id="limpar" href="./">Limpar</a></div>
+      </div>
+
+      <div class="resultado">
+        <div>Valor investido R$ <span id="valorInvestido">0.00</span></div>
+        <div>Valor de juros R$ <span id="valorJuros">0.00</span></div>
+        <div>Valor total R$ <span id="valorTotal">0.00</span></div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>

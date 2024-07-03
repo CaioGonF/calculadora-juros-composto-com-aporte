@@ -1,0 +1,125 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 100px auto;
+  max-width: 1200px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #1b1b1b;
+}
+a {
+  text-decoration: none;
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid lightgray;
+}
+.detalhe + input {
+  border-left: none;
+}
+
+.container {
+  background-color: antiquewhite;
+  padding: 10px 30px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 100px;
+}
+.titulo {
+  grid-column: -1/1;
+}
+.opcao {
+  display: flex;
+}
+.opcao input {
+  text-align: right;
+}
+.opcao label {
+  margin-right: 5px;
+}
+.detalhe {
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  padding: 0 10px;
+  border-right: none;
+}
+.menu {
+  margin-top: 20px;
+  grid-column: -1/1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resultado {
+  grid-column: -1/1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 4px;
+}
+.resultado div {
+  margin-top: 30px;
+  padding: 10px 5px;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 21px;
+}
+.resultado span {
+  text-align: right;
+  font-weight: normal;
+}
+#calcular {
+  padding: 10px 40px;
+  border: 1px solid lightgray;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+#calcular:hover {
+  background-color: brown;
+}
+#limpar {
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #1b1b1b;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  #calcular {
+    font-size: 14px;
+  }
+  #limpar {
+    font-size: 12px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto 15px;
+  }
+  .resultado {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .resultado div {
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  .resposividadeOpcao {
+    flex-wrap: wrap;
+  }
+}
